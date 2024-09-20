@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h2>Weather</h2>
+        </div>
+
+        <!-- Weather Input -->
+        <div class="weather-input">
+            <input type="text" id="city_input" placeholder="Enter city name">
+            <button id="searchBtn">
+                <i class="fa-light fa-magnifying-glass"></i> Search
+            </button>
+            <button id="locationBtn">
+                <i class="fa-solid fa-location-crosshairs"></i> Current Location
+            </button>
+        </div>
+
+        <!-- Weather Data -->
+        <div class="weather-data">
+            <!-- Left Section -->
+            <div class="weather-left">
+                <div class="card">
+                    <div class="current-weather">
+                        <div class="details">
+                            <p>Now</p>
+                            <h2 id="currentTemp">__&deg;C</h2>
+                            <p id="currentDesc">_____</p>
+                        </div>
+                        <div class="weather-icon">
+                            <img id="weatherIcon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_49-512.png" alt="weather icon">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-footer">
+                        <p><i class="fa-light fa-calendar"></i> <span id="currentDate">_____</span></p>
+                        <p><i class="fa-light fa-location-dot"></i> <span id="location">_____</span></p>
+                    </div>
+                </div>
+
+                <!-- 5 Day Forecast -->
+                <div class="card forecast">
+                    <h3>5 Days Forecast</h3>
+                    <div id="forecastContainer"></div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="weather-right">
+                <!-- Highlights -->
+                <h3>Today's Highlights</h3>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <h3>Air Quality Index</h3>
+                        <p id="aqi">____</p>
+                        <p class="label">Very Poor</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Humidity</h3>
+                        <p id="humidity">__%</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Pressure</h3>
+                        <p id="pressure">__ hPa</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Visibility</h3>
+                        <p id="visibility">__ km</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Wind Speed</h3>
+                        <p id="windSpeed">__ m/s</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Feels Like</h3>
+                        <p id="feelsLike">__&deg;C</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Sunrise & Sunset</h3>
+                        <p>Sunrise: <span id="sunrise">__</span></p>
+                        <p>Sunset: <span id="sunset">__</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="env.js" type="module"></script>
+
+</body>
+</html>
